@@ -4,18 +4,25 @@ import 'react-bootstrap';
 import { AiFillHome } from 'react-icons/ai';
 import { BsMessenger} from 'react-icons/bs';
 import { GiWrappedHeart } from 'react-icons/gi';
-import {Route, Router, Routes} from 'react-router-dom'
-import Update from './Update';
+import {Navigate, Route, Router, Routes} from 'react-router-dom'
+import Update from './Components/Update';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import Story from './Components/Story';
+import { useDispatch, useSelector } from 'react-redux';
+import { Action } from 'history';
+import Followers from './Components/Followers';
+import Pid from './Components/Pid';
 
 
+export let followerContext = React.createContext();
 
 
 
 
 function App(props) {
- 
+  
+  
   return (
     <div className="App background">
       <header className='container header-size'>
@@ -25,6 +32,7 @@ function App(props) {
        </img></div>
       
        <Update></Update>
+       <Story></Story>
        
        
        
@@ -37,7 +45,7 @@ function App(props) {
       onClick={()=>{console.log('짜잔')}}></BsMessenger>
       
       <AiFillHome className='iposition '  size="30"
-      onClick={()=>{console.log('짜잔')}}></AiFillHome>   
+      onClick={()=>{<Navigate exact to ="/"></Navigate>}}></AiFillHome>   
      
        </div>
         </div>
@@ -46,7 +54,11 @@ function App(props) {
    
       <Routes>
       
-      <Route exact path='/' element={<Main></Main>}> 
+      <Route exact path='/' element={
+        
+      <Main >
+        
+      </Main>}> 
         </Route>
       </Routes>
     
@@ -54,80 +66,22 @@ function App(props) {
   );
 }
 
-
-const FollwerList =({follower})=>{
-   
-
-  return <div className='follower-location'>
-    <div> 나를 팔로우하는사람들</div>
-    {
-      follower.map((item)=>{
-        return(
-         
-          <div>
-             
-            <img className='follower-size follwer-location'alt={item.login} src={item.avatar_url}></img>
-           {item.login}
-
-                 
-          </div>
-         
-        )
-      })
-    }
-    {/* <Pagination></Pagination> */}
-  </div>
-}
-
-const Followers = (props)=>{
-  let [follower,followerChange] = useState([]);
-  
-      useEffect(()=>{
-        axios.get('https://api.github.com/users/john-smilga/followers?per_page=100').
-        then((result)=>{
-          console.log('팔로우',result.data);
-          let copy=  [...result.data]
-         followerChange(copy)
-        
-         
-          
-        }).catch(()=>{
-     
-          console.log('실패')
-        },);
-
-      },[]);
-     
-  
-
-    return (
-     <div>
-       <FollwerList follower={follower}></FollwerList>
-     </div>
-
-    )
  
 
-}
-
-// const Pagination = ({follower})=>{
-
-//   return<div>
-//   <Followers></Followers>
-//   </div> 
-// }
-
 function Main(props){
+ 
   
   return <div className='main-size container'>
     <div>
-    <Followers></Followers>
     
+    <Followers></Followers>
+    {/* <Pid></Pid> */}
     </div>
    
-     <span>
+     {/* <div>
+       <Pid></Pid>
   여기는 피드
-</span>
+</div> */}
  
     </div>
 
