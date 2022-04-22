@@ -15,10 +15,15 @@
   width: 40%;
 }
 .logo-position{
-  margin: 50px;
-}
+  position: relative;
+  left:20%;
+  top:50px;
+} 
 .header-size{
-  height: 30%;
+  height: 100px;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 50px;
+  margin-bottom: 30px;
 
 }
 .update-button {
@@ -49,8 +54,8 @@
   margin-top: 10PX;
   /* position: relative;
   height: 40%; */
-  margin-right: 200px;
-  float:right;
+  margin-right: 500px;
+  /* float:right; */
 
 }
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
@@ -70,58 +75,213 @@ body{
 .story{
   font-size: 50px;
 }
-.pid-size{
-  width: 300px;
-  height: 300px;
-}
+/* .pid-size{
+  width: 600px;
+  height: 600px;
+} */
 .pid-position{
- 
-  float: left;
-  margin-left: 50px;
-}
-.follower-border{
-  /* border: solid 1px black; */
-  width: 30%;
   
+
+  margin-left: 20%;
+  margin-top: 10px;
+
+
 }
+
 body{
-  background-color: #d2e1ff
+  background-color: pink;
 }
 
 .comment-border{
   height: 100px;
   margin-top: 20px;
   margin-bottom: 20px;
-  border: solid 1px black;
+
 }
 
 .in-line{
-
-  width:350px;
-  height:500px;
+  border: 1px solid #999999;
+  width:400px;
+  height:800px;
+  margin-top: 20px;
+  padding-right: 50px;
  
 }
 .user-size{
   text-size:80px;
+  margin-bottom: 5px;
   
 
 }
 .user-margin{
-  margin-left: 50px;
-  margin-bottom: 10px;
+  margin-top: 10px;
+  /* margin-left: 50px; */
+  /* margin-bottom: 10px; */
 }
 .text-size{
   text-size:100px;
 }
 .comment{
-  margin-top: 20px;
+
+  margin-top: 50px;
+  margin-bottom: 10px;
 }
 .Story-size{
+  width: 56px;
+  height: 56px;
+  cursor: pointer;
+  border-radius: 50px;
+}
+
+.input-position{
+  position: relative;
+  top:30px;
+  left:50px;
+  width: 400px;
+  height: 20px;
+  border:0 solid black;
+  
+
+}
+input:focus{outline:none;}
+.input-margin{
+  margin-left: 420px;
+  top:10px;
+}
+.text-position{
+ position: relative;
+ left: 10%;
+
+}
+.Main-position{
+  float:right;
+  position: relative;
+  right: -150px;
+}
+.Main-leftposition{
+  float:left;
+}
+.img-style{
+  border-radius: 10px;
+}
+.good-position{
+  position: relative;
+  left: 40px;
+  margin-top: 10px;
+  /* margin-bottom: 10px; */
+}
+.profile-size{
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  position: relative;
+  left: 60px;
+  top:-30px;
+  
+ 
+
+}
+.good-people{
+  position: relative;
+  top:-40px;
+  left: 60px;
+
+  
+}
+.story-index{
+  z-index: 100;
+}
+.profile-size1{
   width: 50px;
   height: 50px;
-  cursor: pointer;
+  border-radius: 30px;
+  position: relative;
+  right: 5%;
+  float: left;
 }
-.story-position{
+.my-margin{
+  margin-bottom: 20px;
+}
+.update-position{
+  position: relative;
+  top:50px;
+  right: 80px;
+  width: 30px;
+  height: 30px;
+  color: black;
+  cursor:pointer;
+}
+.Main-background{
+ background-color: gray;
+}
+.page-margin{
+  margin-right: 3px;
+}
+.page-position{
+  position: relative;
+  right: 120px;
+}
+.myButton {
+	box-shadow:inset 0px 1px 0px 0px #efdcfb;
+	background:linear-gradient(to bottom, #FFCCE5 5%, #ff99cc 100%);
+	background-color:#dfbdfa;
+	border-radius:6px;
+	border:1px solid #FFCCFF;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	/* padding:6px 24px; */
+	text-decoration:none;
+	text-shadow:0px 1px 0px white;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #FFCCE5 5%, #FF66b2 100%);
+	background-color:pink;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+.myButton1 {
+	box-shadow:inset 0px 1px 0px 0px #efdcfb;
+	background:linear-gradient(to bottom,#FFCCE5 5%, #ff99cc 100%);
+	background-color:#dfbdfa;
+	border-radius:6px;
+	border:1px solid #FFCCFF;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:2px 2px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px white;
+}
+.myButton1:hover {
+	background:linear-gradient(to bottom, #FFCCE5 5%, #FF66b2 100%);
+	background-color:#bc80ea;
+}
+.myButton1:active {
+	position:relative;
+	top:1px;
+}
+.story-index1{
+  position:relative;
+  top:0;
+  left: 20%;
+  z-index: 300;
+}
+.recomenn-margin{
   margin-top: 50px;
-  margin-right: 30px;
 }
+a{
+  text-decoration-line: none;
+}
+@media screen and (max-width: 1400px) { .Main-position{display: none;}}
+@media screen and (max-width: 1400px) { .media{display: none;}}
+

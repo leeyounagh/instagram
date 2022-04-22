@@ -1,6 +1,7 @@
 body{
   display: contents;
 font-family: arial, sans-serif;
+background-color: antiquewhite;
 }
 .logposition{
   position: relative;
@@ -10,7 +11,9 @@ font-family: arial, sans-serif;
 }
 .iposition{
   float: right;
-  margin-top: 50px;
+  position: relative;
+  right: 260px;
+  margin-top: 48px;
   margin-right: 30px;
   cursor: pointer;
 }

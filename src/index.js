@@ -4,30 +4,38 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from 'react-router-dom'
-// import {Provider} from 'react-redux'
-// import { createStore } from 'redux';
+import {Provider} from 'react-redux'
+import { createStore } from 'redux';
 
 
 
-// let 댓글창 =false;
+let 모달창값 = false
 
-// function reducer (state=댓글창,action){
-//   if(action.type==='성공'){
-    
-   
-//   } 
-//   else{
-//     return state
-//   }
+function reducer (state=모달창값,action){
+  
+  if(action.type==='모달실행'){
+       
+    state =true;
+    return state
+  }
+  
  
-// }
-// let store = createStore(reducer)
+ 
+ 
+}
+let store = createStore(reducer)
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
+<Provider store={store}>
+<App />
+
+</Provider>
+
+
+
  
- <App />
  
  
 

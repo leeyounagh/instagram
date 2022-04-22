@@ -1,19 +1,4 @@
-.Modal-style{
-    width: 800px;
-    height:800px;
-    background-color: black;
-    background: url(https://i.pinimg.com/564x/6e/e9/6a/6ee96aa7fc064647ab352b34b01f105f.jpg);
-    background-repeat:no-repeat 
-    
-}
 
-.Modal-style2{
-    width: 800px;
-    height:800px;
-    background-color: black;
-    background: url(https://i.pinimg.com/736x/0f/6d/73/0f6d732ab07b52d07ffb1c3bd040113c.jpg);
-    background-repeat:no-repeat 
-}
 .text-color{
     color: pink;
 }
@@ -22,3 +7,121 @@ body{
     background: url(https://i.pinimg.com/736x/0f/6d/73/0f6d732ab07b52d07ffb1c3bd040113c.jpg);
     background-repeat:no-repeat 
 }
+.Story-position{
+   
+    margin-right: 30px;
+    margin-bottom: 0px;
+    z-index:10;
+    /* position: relative;
+    top: 30px; */
+}
+.position{
+    position: relative;
+    left:32%;
+    top:50%;
+}
+.story-border{
+    border: 1px solid #e0e0e0;
+    
+    position: relative;
+    left: 20%;
+    padding-top: 0px;
+    height: 100px;
+    width: 650px;
+    white-space:nowrap;
+    clip-path: inset(0 0 0 0);
+
+}
+
+
+.button-style{
+    margin-left: 5px;
+    position: relative;
+    top:-20px;
+    
+    
+}
+
+.button-style1{
+    margin-right: 5px;
+    position: relative;
+    top:-20px;
+    background-color: #CCE5FF;
+
+    
+}
+button{
+	border:none;
+    
+}
+.myButton3 {
+	box-shadow:inset 0px -1px 0px 0px #dcecfb;
+	background:linear-gradient(to bottom, #bddbfa 5%, #80b5ea 100%);
+	background-color:#bddbfa;
+	border-radius:19px;
+	border:1px solid #84bbf3;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:0px 0px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #528ecc;
+}
+.myButton3:hover {
+	background:linear-gradient(to bottom, #80b5ea 5%, #bddbfa 100%);
+	background-color:#80b5ea;
+}
+
+
+.story-position2{
+    position: relative;
+    left: 0;
+}        
+.position2{
+    position:relative;
+    left: 10%;
+}
+.Story-button{
+    position: absolute;
+    top:40%;
+    right:0%; 
+    z-index: 300;
+ }
+
+ .Story-button1{
+    position: absolute;
+
+    top:40%;
+    left: 0%;
+    z-index: 300;
+ }
+ .border-setting{
+     border: 1px solid black;
+ }
+ .myButton4 {
+	box-shadow:inset 0px 1px 0px 0px #dcecfb;
+	background:linear-gradient(to bottom, pink 5%,  rgb(247,150,192) 100%);
+	background-color:pink;
+	border-radius:38px;
+	border:1px solid  rgb(247,150,192);
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	font-weight:bold;
+	padding:0px 0px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px pink;
+}
+.myButton4:hover {
+	background:linear-gradient(to bottom,  rgb(247,150,192) 5%, pink 100%);
+	background-color:pink;
+}
+/* .myButton4:active {
+	position:relative;
+	top:1px;
+} */
