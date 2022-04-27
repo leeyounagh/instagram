@@ -11,9 +11,9 @@ body{
    
     margin-right: 30px;
     margin-bottom: 0px;
+    
     z-index:10;
-    /* position: relative;
-    top: 30px; */
+    
 }
 .position{
     position: relative;
@@ -22,7 +22,7 @@ body{
 }
 .story-border{
     border: 1px solid #e0e0e0;
-    
+   
     position: relative;
     left: 20%;
     padding-top: 0px;
@@ -101,27 +101,21 @@ button{
  .border-setting{
      border: 1px solid black;
  }
- .myButton4 {
-	box-shadow:inset 0px 1px 0px 0px #dcecfb;
-	background:linear-gradient(to bottom, pink 5%,  rgb(247,150,192) 100%);
-	background-color:pink;
-	border-radius:38px;
-	border:1px solid  rgb(247,150,192);
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:13px;
-	font-weight:bold;
-	padding:0px 0px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px pink;
+ .story-border button{
+     background-color: #fff;
+     color: gray;
+     border-radius: 50%;
+     cursor: pointer;
+     box-shadow: 0 0 10px #999;
+ }
+
+
+.smooth{
+    opacity: 0.7;
 }
-.myButton4:hover {
-	background:linear-gradient(to bottom,  rgb(247,150,192) 5%, pink 100%);
-	background-color:pink;
+
+.ibutton-size{
+    width: 20px;
+    height: 20px;
+    
 }
-/* .myButton4:active {
-	position:relative;
-	top:1px;
-} */

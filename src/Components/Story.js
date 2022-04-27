@@ -1,5 +1,6 @@
 import React, { useEffect, useState,useRef } from "react";
 import Stories from 'react-insta-stories';
+import '@fortawesome/fontawesome-free/js/all.js';
 
 import "./Story.css"
 
@@ -113,8 +114,8 @@ const Story = (props) =>{
           
           return <div className="position2"><Stories 	stories={story1} loop={false}
           defaultInterval={1500}
-          width={1500}
-          height={1800}
+          width={400}
+          height={500}
     isPaused={false} ></Stories></div> 
       }
 
@@ -197,21 +198,23 @@ const Story = (props) =>{
          const StoryMove={
              position:'relative',
              top:'30px',
-             left:`${x좌표}px`
+             left:`${x좌표}px`,
+             transition:'0.5s all ease-out'
          }
         return <div>
           
                <div className="story text-color story-box position story-border">
-               <button className="Story-button1 myButton4" onClick={()=>{
+               <button className="Story-button1  smooth ibutton-size" onClick={()=>{
                imageControlLeft() 
                console.log(x좌표)
-            }}>◀</button>
+            }}><i class="fa-solid fa-chevron-left "></i></button>
             
-            <span>
+            <span >
                
               {
                     URl.map((item)=>{ return(
-                        <span><img className="Story-size Story-position text-color" style={StoryMove}alt="육성재" src={item.url}
+                        <span >
+                       <span ><img className="  Story-size Story-position text-color" style={StoryMove}alt="육성재" src={item.url}
                      onClick={(e)=>{
                  e.preventDefault()
              
@@ -219,6 +222,8 @@ const Story = (props) =>{
                  storyRendering()
                
               }}></img></span>
+                        </span>
+                        
                     )})
                                   
                         
@@ -227,10 +232,10 @@ const Story = (props) =>{
      
              </span>   
             
-             <button className="Story-button myButton4"  onClick={()=>{
+             <button className="Story-button  smooth ibutton-size"  onClick={()=>{
                 imageControlRight()
                 console.log(x좌표)
-            }}>▶</button>
+            }}><i class=" fa-solid fa-chevron-right"></i></button>
         
         </div>
         

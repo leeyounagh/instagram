@@ -132,7 +132,15 @@ body{
   cursor: pointer;
   border-radius: 50px;
 }
-
+.Story-back{
+  background: linear-gradient(rgb(231,0,231),rgb(235,115,0));
+  width: 80px;
+  height: 80px;
+  position: relative;
+ 
+  border-radius: 50%;
+  border: 1px solid black;
+}
 .input-position{
   position: relative;
   top:30px;
@@ -155,8 +163,16 @@ input:focus{outline:none;}
 }
 .Main-position{
   float:right;
+  
   position: relative;
-  right: -150px;
+  top:-100px;
+  right: 50px;
+  
+}
+.Right-border{
+  border: 1px solid black;
+ width: 400px;
+ padding: 20px;
 }
 .Main-leftposition{
   float:left;
@@ -285,3 +301,29 @@ a{
 @media screen and (max-width: 1400px) { .Main-position{display: none;}}
 @media screen and (max-width: 1400px) { .media{display: none;}}
 
+.recomen-position{
+  display: flex;
+  justify-content: space-between;
+}
+.recom-button{
+  position:relative;
+  top:20px;
+}
+.Right-border{
+  display: fixed;
+}
+.follower-position{
+  display: flex;
+  justify-content: space-around;
+}
+.login-position{
+  position: relative;
+  
+  /* right: 50px; */
+  top: 0;
+}
+.follower-textposition{
+  position: relative;
+  right: -20px;
+  top: -20px;
+}

@@ -3,7 +3,6 @@ import axios from 'axios';
 import {AiOutlineHeart} from 'react-icons/ai';
 import {HeartOutlined, HeartFilled, WindowsFilled} from '@ant-design/icons';	
 import "./feed.css"
-import {BiMessageRoundedDetail} from 'react-icons/bi'
 import { v4 as uuidv4 } from 'uuid';
 
 
@@ -39,8 +38,8 @@ const Feed = (props)=>{
    let id = 0;
    const [댓글추가,댓글추가변경]=useState([]);
     const [mode,modeChange] =useState('댓글추가')
-    const[id배열,id배열추가]=useState([])
-
+   let IndexRef =useRef(0) 
+   
     let _input = ""
    
    useEffect(()=>{
@@ -51,7 +50,9 @@ const Feed = (props)=>{
 const onSubmit = (e) => {
   댓글추가변경([...댓글추가,{id:idRef.current,title:_input}])
   console.log(댓글추가)
-  idRef.current = idRef.current+1;
+  console.log('궁금함',IndexRef.current.value)
+  // const newCommentVal = IndexRef.current.value;
+  idRef.current = idRef.current+1;//댓글수 카운트
 
  
 }
@@ -74,8 +75,9 @@ const onClick2 = () =>{
 
 const onChange2 = (e) => {
   _input = e.target.value
-  
+  IndexRef= e.target.name;
   console.log(_input,id)
+  console.log(IndexRef)
 }
 
  function deleteItem(index,id){
@@ -107,16 +109,25 @@ const onChange2 = (e) => {
    }
 
  }
-
+//  function 게시물번호 (e){
+           
+//   IndexRef= e.target.name;
+//   console.log(IndexRef)
+//   commentArea(IndexRef.current)
+//  }
  
 
 function F_Comment({comm,id}){
   
+  
   return(
     <div key={uuidv4()}>
       
-      <span className="comm-position syu-comment"> 슈짱</span>  <span  key={uuidv4()}><b className="comm-position comm-font">{comm.title}</b>
+      <span className="comm-position 
+      
+      "> 슈짱</span>  <span  key={uuidv4()}><b className="comm-position comm-font">{comm.title}</b>
       </span>
+      
     <span key={uuidv4()}>{commChecked?<HeartFilled className="heart-position good-color" size="24" onClick={onClick}></HeartFilled>:
     <HeartOutlined className="heart-position " size="24"onClick={onClick2}></HeartOutlined>}</span>
     <span key={uuidv4()}><button className="delete-position w-btn w-btn-pink" name={comm.id} onClick={(e)=>{
@@ -140,9 +151,10 @@ function F_CommentList(){
 }
 
 
-const commentArea = () => {
+const commentArea = (index) => {
   if(mode==='댓글업데이트'){
-    console.log('댓글업데이트 start')
+    
+    //커서 올린곳의 name값
    return <span key={uuidv4()}>
            
             <span>
@@ -156,7 +168,14 @@ const commentArea = () => {
   }
 }
 
-   
+   function 테스트(e){
+     console.log(e.target.name,IndexRef.current)
+     if(e.target.name==IndexRef.current){
+        return console.log('성공')
+     }else{
+       return null
+     }
+   }
 
 
     return <div className="follower-border feed-index ">
@@ -170,7 +189,7 @@ const commentArea = () => {
             <div className="user-border" >
             <span className=" user-flex"><img className="user-profile u-picture-position user-padding"alt="유저사진" src="https://i.pinimg.com/564x/1f/84/85/1f8485a04ffa78cd459d117656be4f84.jpg"></img></span>
           <span className=" user-flex"><a   href={item.photographer_url}>{item.photographer}</a></span>
-         
+          <div>{i}</div>
           </div>
           <div><img className=" feed-photo" alt={item.alt} src={item.src.large}></img></div> 
          <span>
@@ -190,20 +209,12 @@ const commentArea = () => {
          </div>
         
             
-            <div className="comment text-position1 "><button className="custom-btn btn-6"onClick={(e)=>{
-              
-               e.preventDefault()
-                댓글변경(!댓글)  
-                console.log(mode)
-                
-                
-            }}>all comment</button></div>
+        
             <div className="user-margin">
-            {
-              댓글 == true&& <form onSubmit={(e)=>{
+             <form onSubmit={(e)=>{
                 e.preventDefault()
                 modeChange('댓글업데이트')
-             
+                e.target.reset()
                 return false
               
                
@@ -217,23 +228,26 @@ const commentArea = () => {
            </div>
 
               <span ><input className="input-width  input-position"
-                onChange={(e) => {onChange2(e)}} type="text" placeholder="댓글달기.." ></input> </span> 
+                onChange={(e) => {onChange2(e) 
+                   }} type="text" placeholder="댓글달기.." name={i} ref={IndexRef}></input> </span> 
                
-               <span><input  key={i} className="  input-margin w-btn w-btn-pink" type="submit" name="name" value="comment"
+               <span><input  key={i} className="  input-margin w-btn w-btn-pink" type="submit" name={i} value="게시"
                onClick={(e)=>{
                 onSubmit(e)
+                테스트(e)
                 modeChange('댓글업데이트')
-                console.log(mode)
                 
-                console.log(댓글추가)
                 
+               
+                         
+               
                   
                }}></input></span>
-               
+               {/* {테스트()} */}
               </form>
                
             
-            } 
+            
          
             
           

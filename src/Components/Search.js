@@ -31,7 +31,7 @@ const Search = () => {
     return (
         <div>
            <span className='Search-position'>
-          <span  ><input className='search-input' type="text" placeholder='   사용자 검색...'
+          <span  ><input className='search-input' type="text" placeholder='사용자 검색...'
           onChange={(e)=>{
             setSearchTerm(e.target.value)
           }}></input></span>

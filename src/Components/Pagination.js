@@ -6,7 +6,7 @@ const Pagination =(followers) => {
     
      console.log('페이지네이션',followers)
  
-    let PagePerItem =9;
+    let PagePerItem =5;
     let Pages = Math.ceil(followers.length/PagePerItem); //하나의 페이지당 9개씩 
     
  

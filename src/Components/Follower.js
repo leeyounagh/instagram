@@ -11,17 +11,20 @@ const Follower = ({ avatar_url, html_url, login }) => {
   {
     
         <div>
-         <span>
-       <span><img className='follower-size follwer-location img-style' src ={avatar_url} alt={login}></img></span>  
-        <span className='login-position'>{login}</span> 
-           </span>  
-        <div className='view-position'>
+         <span className='follower-position'>
+           <span className='login-position'>
+           <span><img className='follower-size img-style' src ={avatar_url} alt={login}></img></span>  
+        <span className='follower-textposition' >{login}</span> 
+           </span>
+      
+          
+      
         <a href={html_url} className="btn profile-margin">
            <button className=' w-btn w-btn-pink' onClick={(e)=>{}}>view profile</button>
          
          </a>
-        </div>
-        
+      
+         </span>  
          
         </div>
        
