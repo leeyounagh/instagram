@@ -21,6 +21,7 @@
     "react-dom": "^18.0.0",
     "react-hook-usefetch": "^1.0.4",
     "react-icons": "^4.3.1",
+    "react-infinite-scroll-component": "^6.1.0",
     "react-insta-stories": "^2.3.0",
     "react-redux": "^7.2.8",
     "react-router-dom": "^6.3.0",
@@ -53,5 +54,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^6.1.1"
   }
 }

@@ -3,18 +3,22 @@ import Stories from 'react-insta-stories';
 import '@fortawesome/fontawesome-free/js/all.js';
 
 import "./Story.css"
+import { useDispatch, useSelector } from "react-redux";
 
 const Story = (props) =>{
    
     
     const [id,id변경] =useState(0)
-
+    let state=useSelector((state)=>state.reducer)
+    let rightstate=useSelector((state)=>state.reducer2)
+     let dispatch=useDispatch();
+    
     const story1 =[
         {
-            url:"https://i.pinimg.com/564x/f7/cc/f5/f7ccf529d347d604c9e62a67967297d1.jpg" ,
+            url:"https://i.pinimg.com/564x/83/e7/4d/83e74dc279e8d65c2bd2ab163db5c800.jpg" ,
             duration: 3000,
             header: {
-                heading: '설리',
+                heading: '한소희',
                 subheading: 'Posted 30m ago',
                 profileImage: 'https://picsum.photos/100/100',
                 
@@ -24,10 +28,10 @@ const Story = (props) =>{
         },
         
         {
-            url:"https://i.pinimg.com/564x/97/74/cc/9774ccdc08a0e0505bc50cf8a69a0aaf.jpg" ,
+            url:"https://i.pinimg.com/564x/e3/14/17/e31417a233f7b67e4e6f2e65f5691150.jpg" ,
             duration: 3000,
             header: {
-                heading: '카리나',
+                heading: '아이유',
                 subheading: 'Posted 30m ago',
                 profileImage: 'https://picsum.photos/99/99',
             },
@@ -124,7 +128,7 @@ const Story = (props) =>{
           return <div className="story-index1 story-position2 position2"> 
          <Stories 	stories={story1} loop={false}
           defaultInterval={1500}
-          width={800}
+          width={830}
           height={600}
          isPaused={false}  onAllStoriesEnd={(s, st) => id변경(0)}
          storyStyles ></Stories>
@@ -179,17 +183,28 @@ const Story = (props) =>{
         ]
         const imageControlLeft =()=>{
             if(x좌표===0){
-                x좌표변경(0)    
+                x좌표변경(0)  
+                dispatch({type:'첫페이지'})  
+                dispatch({type:'오른쪽버튼활성화'})   
+                
             }else{
                 x좌표변경(x좌표+500)
+                dispatch({type:'왼쪽버튼활성화'}) 
+                dispatch({type:'오른쪽버튼활성화'})   
             }
         }
 
         const imageControlRight =()=>{
             if(x좌표===-2000){
-                x좌표변경(-2000)    
-            }else{
+                x좌표변경(-2000) 
+                dispatch({type:'왼쪽버튼활성화'})
+                dispatch({type:'마지막페이지'})  
+                  
+            }
+            else{
                 x좌표변경(x좌표-500)
+                dispatch({type:'오른쪽버튼활성화'})
+                dispatch({type:'왼쪽버튼활성화'}) 
             }
         }
      
@@ -199,12 +214,14 @@ const Story = (props) =>{
              position:'relative',
              top:'30px',
              left:`${x좌표}px`,
-             transition:'0.5s all ease-out'
+             transition:'1.0s all ease-out'
          }
+        
+       
         return <div>
           
                <div className="story text-color story-box position story-border">
-               <button className="Story-button1  smooth ibutton-size" onClick={()=>{
+               <button className="Story-button1  smooth ibutton-size" style={{display:state?'block':'none'}}onClick={()=>{
                imageControlLeft() 
                console.log(x좌표)
             }}><i class="fa-solid fa-chevron-left "></i></button>
@@ -217,7 +234,7 @@ const Story = (props) =>{
                        <span ><img className="  Story-size Story-position text-color" style={StoryMove}alt="육성재" src={item.url}
                      onClick={(e)=>{
                  e.preventDefault()
-             
+              
                  id변경(1)
                  storyRendering()
                
@@ -232,7 +249,7 @@ const Story = (props) =>{
      
              </span>   
             
-             <button className="Story-button  smooth ibutton-size"  onClick={()=>{
+             <button className="Story-button  smooth ibutton-size" style={{display:rightstate?'block':'none'}}  onClick={()=>{
                 imageControlRight()
                 console.log(x좌표)
             }}><i class=" fa-solid fa-chevron-right"></i></button>

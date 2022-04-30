@@ -5,25 +5,38 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from 'react-router-dom'
 import {Provider} from 'react-redux'
-import { createStore } from 'redux';
+import { combineReducers,createStore } from 'redux';
 
 
 
-let 모달창값 = false
+let 왼쪽버튼 = false;
+let 오른쪽버튼 =true;
 
-function reducer (state=모달창값,action){
-  
-  if(action.type==='모달실행'){
-       
+function reducer (state=왼쪽버튼,action){
+  if(action.type ==='첫페이지'){
+    state =false;
+    return state
+  }else if(action.type ==='왼쪽버튼활성화'){
     state =true;
     return state
+  }else{
+    return state
   }
-  
- 
- 
  
 }
-let store = createStore(reducer)
+function reducer2 (state=오른쪽버튼,action){
+  if(action.type ==='마지막페이지'){
+    state =false;
+    return state
+  }else if(action.type ==='오른쪽버튼활성화'){
+    state =true;
+    return state
+  }else{
+    return state
+  }
+ 
+}
+let store =createStore(combineReducers({reducer,reducer2}))
 
 ReactDOM.render(
   <React.StrictMode>

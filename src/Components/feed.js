@@ -1,7 +1,7 @@
 import React,{useState,useEffect,useRef} from "react";
 import axios from 'axios';
-import {AiOutlineHeart} from 'react-icons/ai';
-import {HeartOutlined, HeartFilled, WindowsFilled} from '@ant-design/icons';	
+
+import {HeartOutlined, HeartFilled} from '@ant-design/icons';	
 import "./feed.css"
 import { v4 as uuidv4 } from 'uuid';
 
@@ -178,7 +178,7 @@ const commentArea = (index) => {
    }
 
 
-    return <div className="follower-border feed-index ">
+    return <div className=" feed-index ">
           {
            
       props.Photo.map((item,i)=>{

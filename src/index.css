@@ -1,23 +1,21 @@
 body{
   display: contents;
 font-family: arial, sans-serif;
-background-color: antiquewhite;
+
 }
 .logposition{
   position: relative;
   left: 50px;
-  top: 50px;
+  top: 30px;
   
 }
 .iposition{
   float: right;
   position: relative;
   right: 260px;
-  margin-top: 48px;
+  top:20px;
+  /* margin-top: 70px; */
   margin-right: 30px;
   cursor: pointer;
 }
 
-body{
-  background: aquamarine;
-}

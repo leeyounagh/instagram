@@ -4,10 +4,11 @@
   -o-object-fit: contain;
   object-fit: contain;
 }
-.ui-flex{
+/* .ui-flex{
+  
   display: flex;
   justify-content: space-between;
-}
+} */
 .ui-set{
   align-items:flex-end;
 }
@@ -17,14 +18,18 @@
 .logo-position{
   position: relative;
   left:20%;
-  top:50px;
+  top:60px;
 } 
 .header-size{
   height: 100px;
   border-bottom: 1px solid #e0e0e0;
   padding-bottom: 50px;
   margin-bottom: 30px;
-
+  /* border: 1px solid black; */
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  background: white;
 }
 .update-button {
   background-color: pink;
@@ -70,7 +75,8 @@ body{
   font-size: 30px;
 }
 .profile-margin{
-  text-size:30px
+  text-size:30px;
+  margin-top:15px;
 }
 .story{
   font-size: 50px;
@@ -88,9 +94,7 @@ body{
 
 }
 
-body{
-  background-color: pink;
-}
+
 
 .comment-border{
   height: 100px;
@@ -163,22 +167,24 @@ input:focus{outline:none;}
 }
 .Main-position{
   float:right;
+  position: fixed;
+  /* position: relative; */
+  top:160px;
+  right: 200px;
   
-  position: relative;
-  top:-100px;
-  right: 50px;
   
 }
 .Right-border{
-  border: 1px solid black;
- width: 400px;
+ 
+ width: 300px;
  padding: 20px;
+ 
 }
 .Main-leftposition{
   float:left;
 }
 .img-style{
-  border-radius: 10px;
+  border-radius: 50%;
 }
 .good-position{
   position: relative;
@@ -217,6 +223,10 @@ input:focus{outline:none;}
 }
 .my-margin{
   margin-bottom: 20px;
+  position: relative;
+  left: 13%;
+  top:20px;
+
 }
 .update-position{
   position: relative;
@@ -316,14 +326,109 @@ a{
   display: flex;
   justify-content: space-around;
 }
-.login-position{
-  position: relative;
-  
-  /* right: 50px; */
-  top: 0;
-}
+
 .follower-textposition{
   position: relative;
   right: -20px;
   top: -20px;
+}
+.middle-position{
+  position: relative;
+  top:-20px;
+  left: 10%;
+ 
+}
+.middle-position1{
+  position: relative;
+  top:-15px;
+  right: 40px;
+  color: black;
+}
+.follower-margin{
+  margin-top: 10px;
+}
+
+.follower-border{
+ 
+  position: relative;
+  top:-30px;
+}
+
+.w-btn1 {
+  position: relative;
+  border: none;
+  display: inline-block;
+  /* padding: 15px 30px; */
+  border-radius: 15px;
+  font-family: "paybooc-Light", sans-serif;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.25s;
+}
+
+.w-btn1-outline {
+  position: relative;
+  /* padding: 15px 30px; */
+  border-radius: 15px;
+  font-family: "paybooc-Light", sans-serif;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.25s;
+}
+
+.w-btn1-indigo {
+  background-color: aliceblue;
+  color: #1e6b7b;
+}
+
+.w-btn1-indigo-outline {
+  border: 3px solid aliceblue;
+  color: #1e6b7b;
+}
+
+.w-btn1-indigo-outline:hover {
+  color: #1e6b7b;
+  background: aliceblue;
+}
+
+.w-btn1-pink {
+  background-color: #f199bc;
+  color: white;
+ 
+}
+.w-btn1-pink-outline {
+  border: 3px solid #f199bc;
+  color: #6e6e6e;
+}
+.w-btn1-pink-outline:hover {
+  background-color: #f199bc;
+  color: #d4dfe6;
+}
+
+.w-btn1:hover {
+  letter-spacing: 2px;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.w-btn1-outline:hover {
+  letter-spacing: 2px;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.w-btn1:active {
+  transform: scale(1.5);
+}
+
+.w-btn1-outline:active {
+  transform: scale(1.5);
+}
+
+.test{
+  border: 1px solid black;
+  float: right;
+  width: 30%;
 }

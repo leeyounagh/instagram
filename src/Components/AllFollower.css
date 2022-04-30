@@ -1,0 +1,43 @@
+.allfollower-border{
+    border: 1px solid black;;
+    width: 500px;
+   
+   
+    position: relative;
+    top: 190px;
+    left: 35%;
+}
+.retext-position{
+    position: relative;
+    left: 35%;
+    top: 190px;
+
+}
+.usersimg{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-top: 10px;
+    
+}
+
+body{
+    background-color: white;
+}
+.test1{
+    border: 1px solid #e0e0e0;
+}
+.text-position{
+    position: relative;
+    top:-30px;
+    margin-right: 10px;
+    font-size: 20px;
+}
+.follow-position1{
+    position: relative;
+    right: -100px;
+    top: -20px;
+}
+.border12{
+    border: 1px solid #e0e0e0;
+}
