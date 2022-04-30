@@ -14,7 +14,7 @@ const Search = () => {
         }).map((data)=>{
             return (
                      <div className='search-size margin-right'>
-                            <span ><img className='searchImg' alt='사용자사진' src={data.avatar_url} 
+                            <span className='margin-right'><img className='searchImg' alt='사용자사진' src={data.avatar_url} 
                     ></img></span>
                    <span className='margin-right'>{data.name}</span>  
                    <span  className='margin-right'>{data.age}</span> 

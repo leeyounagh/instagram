@@ -10,7 +10,8 @@
    width: 200px;
    background-color: #FFCCFF;
    fill:  #FFCCFF;
-   
+   position: relative;
+   left: 55%;
    border:none;
    width: 250px;
    height: 40px;
@@ -32,7 +33,7 @@
   position:absolute;
 
   top:100px;
-  right:46% ;
+  right:35% ;
   z-index: 300;
   width: 200px;
   border-color:white;
@@ -52,7 +53,7 @@
 }
 .margin-right{
   margin-top: 2px;
-  margin-right: 5px;
+  margin-right: 8px;
   margin-bottom: 5px;
   
 }

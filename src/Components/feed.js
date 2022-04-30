@@ -187,7 +187,7 @@ const commentArea = (index) => {
           <div className="container in-line profile-area" key={i}>
    
             <div className="user-border" >
-            <span className=" user-flex"><img className="user-profile u-picture-position user-padding"alt="유저사진" src="https://i.pinimg.com/564x/1f/84/85/1f8485a04ffa78cd459d117656be4f84.jpg"></img></span>
+            <span className=" user-flex"><img className="user-profile u-picture-position user-padding"alt="유저사진" src="https://i.pinimg.com/564x/9b/78/95/9b7895a7155439ffb622d7ffc2772a52.jpg"></img></span>
           <span className=" user-flex"><a   href={item.photographer_url}>{item.photographer}</a></span>
           <div>{i}</div>
           </div>

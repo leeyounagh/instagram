@@ -7,7 +7,7 @@
    
     margin-right: 30px;
     margin-bottom: 0px;
-    
+   
     z-index:10;
     
 }
@@ -20,9 +20,10 @@
     border: 1px solid #e0e0e0;
    
     position: relative;
-    top:170px;
+    top:200px;
     left: 20%;
     padding-top: 0px;
+   
     height: 100px;
     width: 650px;
     white-space:nowrap;
@@ -79,8 +80,8 @@ button{
 }        
 .position2{
     position:fixed;
-    left: 10%;
-    top:160px;
+    left: 15%;
+    top:180px;
 }
 .Story-button{
     position: absolute;
@@ -116,4 +117,19 @@ button{
     width: 20px;
     height: 20px;
     
+}
+
+.b-size{
+    position: absolute;
+
+    top:23%;
+    left: 7px;
+ font-size: 13px;
+}
+.b-size-r{
+    position: absolute;
+
+    top:23%;
+    right: 7px;
+ font-size: 13px;
 }

@@ -1,8 +1,8 @@
 .allfollower-border{
-    border: 1px solid black;;
+    border: 1px solid #e0e0e0;;
     width: 500px;
-   
-   
+  
+    background-color:#FFCCFF;
     position: relative;
     top: 190px;
     left: 35%;
@@ -24,12 +24,10 @@
 body{
     background-color: white;
 }
-.test1{
-    border: 1px solid #e0e0e0;
-}
-.text-position{
+
+.text-position1{
     position: relative;
-    top:-30px;
+    top:0px;
     margin-right: 10px;
     font-size: 20px;
 }

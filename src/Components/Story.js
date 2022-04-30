@@ -128,7 +128,7 @@ const Story = (props) =>{
           return <div className="story-index1 story-position2 position2"> 
          <Stories 	stories={story1} loop={false}
           defaultInterval={1500}
-          width={830}
+          width={800}
           height={600}
          isPaused={false}  onAllStoriesEnd={(s, st) => id변경(0)}
          storyStyles ></Stories>
@@ -212,7 +212,7 @@ const Story = (props) =>{
             
          const StoryMove={
              position:'relative',
-             top:'30px',
+             top:'5px',
              left:`${x좌표}px`,
              transition:'1.0s all ease-out'
          }
@@ -224,7 +224,7 @@ const Story = (props) =>{
                <button className="Story-button1  smooth ibutton-size" style={{display:state?'block':'none'}}onClick={()=>{
                imageControlLeft() 
                console.log(x좌표)
-            }}><i class="fa-solid fa-chevron-left "></i></button>
+            }}><i class="fa-solid fa-chevron-left b-size" ></i></button>
             
             <span >
                
@@ -252,7 +252,7 @@ const Story = (props) =>{
              <button className="Story-button  smooth ibutton-size" style={{display:rightstate?'block':'none'}}  onClick={()=>{
                 imageControlRight()
                 console.log(x좌표)
-            }}><i class=" fa-solid fa-chevron-right"></i></button>
+            }}><i class=" fa-solid fa-chevron-right b-size-r"></i></button>
         
         </div>
         

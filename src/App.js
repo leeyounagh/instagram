@@ -42,7 +42,7 @@ function App() {
        
        <div className='media'>
      
-  
+       <a  href="https://github.com/leeyounagh"><img className="profile-size1 iposition"alt="내사진" src="profile.jpg"></img></a>
       <Link to="/allFollower/"> <GiWrappedHeart className='iposition'  size="30"
      ></GiWrappedHeart>
       </Link>
@@ -116,27 +116,7 @@ function Main(props){
           setPage(index)
         }
 
-        // const nextPage = (index)=>{
-        //   setPage((oldPage)=>{
-        //     let nextPage =oldPage+1
-        //     if(nextPage > data.length-1 ){
-        //       nextPage = 0
-        //     }
-        //     return nextPage
-        //   })
-          
-        // }
 
-        // const prevPage = (index)=>{
-        //   setPage((oldPage)=>{
-        //     let prevPage =oldPage+1
-        //     if(prevPage <0 ){
-        //     prevPage =data.length -1
-        //     }
-        //     return prevPage
-        //   })
-          
-        // }
 
         return <main >
         
@@ -155,7 +135,7 @@ function Main(props){
            </span>
           
         
-            <div className='follower-margin'>
+           
             
                
                 {followers.map((follower)=>{
@@ -166,13 +146,13 @@ function Main(props){
             
               
             
-            </div>
+          
         
      
             </div>
           </span>
               </span>
-          <span className='test'>
+          <span>
        
           </span>
           <span className="pid-position Main-leftposition" >

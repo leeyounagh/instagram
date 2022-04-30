@@ -17,18 +17,19 @@
 }
 .logo-position{
   position: relative;
-  left:20%;
+  left:27%;
   top:60px;
 } 
 .header-size{
-  height: 100px;
-  border-bottom: 1px solid #e0e0e0;
-  padding-bottom: 50px;
-  margin-bottom: 30px;
+  height: 180px;
+  /* border-bottom: 1px solid #e0e0e0; */
+  /* padding-bottom: 50px; */
+  margin-bottom: 50px;
   /* border: 1px solid black; */
   width: 100%;
   position: fixed;
   z-index: 100;
+  
   background: white;
 }
 .update-button {
@@ -55,14 +56,13 @@
   width: 50px;
   height: 50px;
 }
-.follower-location{
+/* .follower-location{
   margin-top: 10PX;
-  /* position: relative;
-  height: 40%; */
-  margin-right: 500px;
-  /* float:right; */
 
-}
+  margin-right: 500px;
+  float:right;
+
+} */
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
 
 body{
@@ -70,14 +70,14 @@ body{
   
 }
 
-.pagination-margin{
+/* .pagination-margin{
   margin: 10px;
   font-size: 30px;
-}
-.profile-margin{
+} */
+/* .profile-margin{
   text-size:30px;
-  margin-top:15px;
-}
+  
+} */
 .story{
   font-size: 50px;
 }
@@ -225,7 +225,7 @@ input:focus{outline:none;}
   margin-bottom: 20px;
   position: relative;
   left: 13%;
-  top:20px;
+  top:40px;
 
 }
 .update-position{
@@ -330,28 +330,36 @@ a{
 .follower-textposition{
   position: relative;
   right: -20px;
-  top: -20px;
+  top: 0px;
+  font-size: 20px;
+  
 }
 .middle-position{
   position: relative;
-  top:-20px;
-  left: 10%;
+  top:10px;
+  left: 8%;
+  font-size: 25px;
+  margin-top: 10px;
  
 }
 .middle-position1{
   position: relative;
-  top:-15px;
-  right: 40px;
+  top:22px;
+  right: 0px;
   color: black;
+  font-size: 20px;
 }
-.follower-margin{
+/* .follower-margin{
   margin-top: 10px;
-}
+} */
 
 .follower-border{
  
   position: relative;
-  top:-30px;
+  top:-8px;
+  left: 15px;
+ margin: 0px;
+
 }
 
 .w-btn1 {
@@ -431,4 +439,9 @@ a{
   border: 1px solid black;
   float: right;
   width: 30%;
+}
+.btn-ps{
+  position: absolute;
+  right: -10px;
+  top:10px;
 }

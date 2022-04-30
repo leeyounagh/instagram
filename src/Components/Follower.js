@@ -4,14 +4,13 @@ import "./feed.css"
 const Follower = ({ avatar_url, html_url, login }) => {
  
 
-    return <div>
-    <span className='follower-location container'>
+    return <span className='container'>
   
   
   {
     
         <div className=' follower-border'>
-         <span className='follower-position'>
+         <span >
            <span>
            <span><img className='follower-size img-style ' src ={avatar_url} alt={login}></img></span>  
         <span className='follower-textposition' >{login}</span> 
@@ -19,8 +18,8 @@ const Follower = ({ avatar_url, html_url, login }) => {
       
           
       
-        <a href={html_url} className="btn profile-margin">
-           <button className=' w-btn1 w-btn1-pink' onClick={(e)=>{}}>view profile</button>
+        <a href={html_url}>
+           <button className=' w-btn1 w-btn1-pink btn-ps' onClick={(e)=>{}}>view profile</button>
          
          </a>
       
@@ -38,10 +37,7 @@ const Follower = ({ avatar_url, html_url, login }) => {
  
   
 </span> 
-{/* <span className="pid-position">
-<Feed></Feed>
-</span> */}
-</div>
+
 };
 
 export default Follower;
