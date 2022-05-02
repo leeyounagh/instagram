@@ -11,6 +11,7 @@ import { combineReducers,createStore } from 'redux';
 
 let 왼쪽버튼 = false;
 let 오른쪽버튼 =true;
+let commChecked =false;
 
 function reducer (state=왼쪽버튼,action){
   if(action.type ==='첫페이지'){
@@ -35,7 +36,9 @@ function reducer2 (state=오른쪽버튼,action){
     return state
   }
  
+  
 }
+
 let store =createStore(combineReducers({reducer,reducer2}))
 
 ReactDOM.render(

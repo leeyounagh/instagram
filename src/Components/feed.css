@@ -207,13 +207,13 @@
   transform: scale(1.5);
 }
 .user-profile{
-  width: 40px;
-  height: 40px;
-  border-radius: 40%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
 }
-.user-padding{
+/* .user-padding{
   padding-left: 10px;
-}
+} */
 
 .u-picture-position{
   position: relative;
@@ -228,6 +228,7 @@
   height:60%;
   position: relative;
   top:200px;
+  left: -10px;
   
 }
 .feed-photo{
@@ -277,7 +278,7 @@
   
   justify-content: space-between;
   font-size: 20px;
-  white-space: nowrap;
+  /* white-space: nowrap; */
 }
 .font-size{
   font-size: 20px;

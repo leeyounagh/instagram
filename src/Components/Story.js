@@ -220,7 +220,7 @@ const Story = (props) =>{
        
         return <div>
           
-               <div className="story text-color story-box position story-border">
+               <div className="story text-color story-box container story-border">
                <button className="Story-button1  smooth ibutton-size" style={{display:state?'block':'none'}}onClick={()=>{
                imageControlLeft() 
                console.log(x좌표)

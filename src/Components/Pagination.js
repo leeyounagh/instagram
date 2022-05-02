@@ -16,7 +16,7 @@ const Pagination =(followers) => {
       return  followers.slice(start,start+PagePerItem)
     })
     
-    console.log('newFollowers',newFollowers)
+   
    
     
      return newFollowers

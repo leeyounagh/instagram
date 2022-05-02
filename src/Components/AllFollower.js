@@ -24,17 +24,7 @@ const AllFollower = () => {
     },[])
 
     console.log(items)
-   const userInfo= items.map((item,index)=>{
-       console.log(item.length)
-       return <div key={index} >
-           <span><img className='usersimg'alt='유저들' src={item.avatar_url} ></img></span>
-        <span className='text-position'>이름:{item.name}</span>
-        <span className='text-position'>국가:{item.country}</span>
-        <span className='text-position'> 나이:{item.age}</span>
-       
-       </div> 
-    })
-    
+
     const fetchComments = async () => {
         const res = await fetch(
             `http://localhost:3004/comments?_page=${page}&_limit=20`
@@ -64,9 +54,9 @@ const AllFollower = () => {
 
           {items.map((item,index)=>{ return <div key={index} >
            <span><img className='usersimg'alt='유저들' src={item.avatar_url} ></img></span>
-        <span className='text-position1'>이름:{item.name}</span>
-        <span className='text-position1'>국가:{item.country}</span>
-        <span className='text-position1'> 나이:{item.age}</span>
+        <span className='text-position10'>이름:{item.name}</span>
+        <span className='text-position10'>국가:{item.country}</span>
+        <span className='text-position10'> 나이:{item.age}</span>
        
        </div> })}
          </InfiniteScroll>

@@ -11,17 +11,17 @@
     z-index:10;
     
 }
-.position{
+/* .position{
     position: relative;
-    left:32%;
+    left:500px;
     top:50%;
-}
+} */
 .story-border{
     border: 1px solid #e0e0e0;
    
     position: relative;
     top:200px;
-    left: 20%;
+    left: -74px;
     padding-top: 0px;
    
     height: 100px;

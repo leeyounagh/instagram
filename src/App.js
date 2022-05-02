@@ -30,7 +30,7 @@ function App() {
   return (
     <div className="App">
       <header className='container header-size'>
-        <div >
+        
           <div className='logo-position'>  
          <Link to="/"><img className='ui-set s4Iyt ' alt="Instagram"  src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png" >
        </img></Link>   </div>
@@ -42,7 +42,7 @@ function App() {
        
        <div className='media'>
      
-       <a  href="https://github.com/leeyounagh"><img className="profile-size1 iposition"alt="내사진" src="profile.jpg"></img></a>
+       {/* <a  href="https://github.com/leeyounagh"><img className="profile-size1 iposition"alt="내사진" src="profile.jpg"></img></a> */}
       <Link to="/allFollower/"> <GiWrappedHeart className='iposition'  size="30"
      ></GiWrappedHeart>
       </Link>
@@ -52,7 +52,7 @@ function App() {
      ></AiFillHome>   </Link>
      
        </div>
-        </div>
+        
       </header>
       
      
